@@ -10,16 +10,24 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:unintellisense.helloWorld"
+		"onCommand:unintellisense.randomVariableName"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "unintellisense.helloWorld",
-				"title": "Hello World"
+				"command": "unintellisense.randomVariableName",
+				"title": "Random Variable Name"
 			}
-		]
+		],
+		"keybindings": [
+			{
+			  "command": "unintellisense.randomVariableName",
+			  "key": "ctrl+alt+i",
+			  "mac": "cmd+alt+f1",
+			  "when": "editorTextFocus"
+			}
+		  ]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
