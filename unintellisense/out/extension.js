@@ -25,7 +25,6 @@ function activate(context) {
         // Now provide the implementation of the command with registerCommand
         // The commandId parameter must match the command field in package.json
         let disposable = vscode.commands.registerTextEditorCommand('unintellisense.randomVariableName', (textEditor, edit, ...args) => {
-            console.log(context.globalStoragePath);
             try {
                 var adjective = words_1.adjectives[Math.floor(Math.random() * (words_1.adjectives.length - 0 + 1) + 0)];
                 var noun = words_1.nouns[Math.floor(Math.random() * (words_1.nouns.length - 0 + 1) + 0)];

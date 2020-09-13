@@ -15,12 +15,11 @@ export async function activate(context: vscode.ExtensionContext) {
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerTextEditorCommand('unintellisense.randomVariableName', (textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit, ...args: any[]) => {
-		console.log(context.globalStoragePath);
 		try{
 			var adjective: string = adjectives[Math.floor(Math.random() * (adjectives.length - 0 + 1) + 0)];
 			var noun: string = nouns[Math.floor(Math.random() * (nouns.length - 0 + 1) + 0)];
 			
-		edit.insert(textEditor.selection.active, adjective + noun.replace(/^\w/, (c: string) => c.toUpperCase()))
+			edit.insert(textEditor.selection.active, adjective + noun.replace(/^\w/, (c: string) => c.toUpperCase()))
 		} catch (x){
 			console.log(x);
 		}

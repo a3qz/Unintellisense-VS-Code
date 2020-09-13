@@ -1,8 +1,11 @@
 {
 	"name": "unintellisense",
 	"displayName": "Unintellisense",
+	"publisher": "a3qz",
 	"description": "",
-	"version": "0.0.1",
+	"version": "0.3.0",
+	"repository": "https://github.com/a3qz/Unintellisense-VS-Code",
+	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
@@ -22,12 +25,12 @@
 		],
 		"keybindings": [
 			{
-			  "command": "unintellisense.randomVariableName",
-			  "key": "ctrl+alt+i",
-			  "mac": "cmd+alt+f1",
-			  "when": "editorTextFocus"
+				"command": "unintellisense.randomVariableName",
+				"key": "ctrl+alt+i",
+				"mac": "cmd+alt+f1",
+				"when": "editorTextFocus"
 			}
-		  ]
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
